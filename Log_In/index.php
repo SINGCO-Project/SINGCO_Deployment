@@ -4,8 +4,8 @@
 */
 ob_start();
 session_start();
-//include "database.php";
-//include "checkLogin.php";
+include "database.php";
+include "checkLogin.php";
 include "forgotEmail.php";
 include "Contact.php";
 

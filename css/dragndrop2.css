@@ -1,0 +1,227 @@
+/* This css file is for the UI of the upload modal in the main page.*/
+.cloud{
+   color:  #708090;
+}
+
+.modal-content-upload{
+      position:relative;
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-direction:column;
+      flex-direction:column;
+      background-color:#fff;
+      background-clip:padding-box;
+      border:1px solid rgba(0,0,0,.2);
+      border-radius:.3rem;
+      outline:0;
+      width: 100%;
+      height: 100%;
+      margin: 30px auto;
+    }
+.modal-dialog-upload{
+    max-width: 80%;
+    margin: 30px auto;
+
+}
+
+.li{
+    color:#708090;
+    display: flex;
+    z-index: 6;
+    justify-content: center;
+    text-align: center;
+}
+.li:hover{
+    background: grey;
+}
+
+form{
+  /*  text-align: center;*/
+}
+
+#upload-modal .btnupload{
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  color: white;
+  padding: 9px 22px 9px 22px;
+  font-size: 15px;
+  background: #67C8FF	;
+  cursor: pointer;
+  border-radius: 0;
+  background: transparent;
+  border: 2px solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none;
+  margin: 10px;
+}
+
+#upload-modal .btnupload:hover{
+    background: #FFB300;
+    border: none;
+}
+.drop-field{
+/*border: solid 2px green;
+}
+
+.drop-area{
+   /* background: green;*/
+}
+
+.file-list{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-content: center;
+    text-align: center;
+    margin:0 auto
+}
+.btnupload{
+  background: transparent;
+  color: black;
+  border-radius: 0;
+  border: 1px solid black;
+}
+.btnupload:hover{
+  background: #FFB300;
+}
+.no-items{
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    color: #708090;
+    display: block;
+    font-size: 25px;
+    align-self: center;
+}
+
+.blue-text {
+  font-size: 25px;
+  color: #708090;
+  display: inline-block;
+  padding: 0px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+
+}
+
+.file-list:hover{
+  /*  background: yellow;*/
+}
+
+.drop-field,.drop-area{
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.file-list{
+    /*width: inherit;*/
+}
+
+
+.drop-area{
+    border: 2px dashed black;
+    cursor: pointer;
+    background-color: #BDBDBD;
+
+}
+.drop-area:hover{
+    background: #E0E0E0;
+    border: none;
+    cursor: pointer;
+}
+
+.drop-field .drop-area {
+  display: block;
+  border-radius: 20px;
+  position: relative;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: hidden;
+
+}
+.drop-field,
+.drop-area,
+.drop-field .browse {
+  transition: all 0.3s;
+}
+
+.drop-field.loaded .dropbro-area {
+  border: 1px solid blue;
+}
+
+.drop-field .browse {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.drop-field.loaded .browse {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.drop-field.hover .drop-area {
+  background:gainsboro;
+    border: none;
+    box-shadow: 0 0 10px;
+
+}
+
+.drop-field .drop-area input[type="file"] {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.000001;
+}
+
+.drop-field .file-list {
+    align-content: center;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+/* text of the file*/
+.drop-field .remove {
+  font-size: 40px;
+  z-index: 10;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.remove{
+  align-self: center;
+  width: 100%;
+}
+
+
+.drop-field .remove:hover {
+  color: #708090;
+}
+
+.drop-field.loaded .remove {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.drop-field ul li {
+  text-align: center;
+  list-style: none;
+}

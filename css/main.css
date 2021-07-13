@@ -1,0 +1,672 @@
+/*This css file is for the UI of all the elements in main.php and modals for main page, admin page and certsample page.
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+.ch{
+    border: solid 2px red;
+
+}
+
+.navlogo{
+     padding: 5px;
+}
+
+.username{
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+  position: absolute;
+  margin-right: 50px;
+}
+
+body{
+  background-color: #121212;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  color: #F5F5F5;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.main_container{
+  order: 2;
+}
+.gwa_container{
+  order: 1;
+}
+/*Hover Highlight per row*/
+.row-highlight:hover{
+    border-color:red;
+    color: #FFB300;
+}
+
+
+/* UPLOAD MODAL */
+#upload-modal{
+  position: relative;
+  z-index: 1000000000000;
+  transform: translateY(-100px);
+}
+div.close{
+  font-size: 40px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  background: transparent;
+  padding-right: 10px;
+  color: white;
+}
+div.close:hover{
+  color: #FFB300;
+}
+div.modal-title{
+  font-size: 34px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  color: white;
+  padding-top: 10px;
+}
+#upload-modal .modal-dialog{
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  text-align: center;
+}
+#upload-modal .modal-content-upload, .modal-body-upload, .modal-footer-upload{
+  background-color: #212121;
+}
+
+.modal-content, .modal-content-warning{
+    
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  background-color: #212121;
+  border-radius: 10px;
+  padding: 10px;
+  height: auto;
+  width: 100%;
+}
+#upload-modal .modal-body-upload{
+margin: 25px;
+}
+.fa-cloud-upload{
+  background: -webkit-gradient(linear, left top, left bottom, from(#436AAC), to(#43B7B8));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.blue-text, .no-items{
+  color: black !important;
+}
+/* MODALS */
+#info-modal, #delete-modal, #emptyinput-modal,
+#upload-modal, #extension-modal, #empty-modal,
+#edit-modal, #reset-modal, #print-modal, #printedit-modal, #delete-sem-modal,#logout-modal,#empty-txt-modal{
+  z-index: 1000000000000;
+}
+
+.select2-close-mask{
+   z-index: 10000000000000;
+}
+
+nav{
+  z-index: 100000;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  justify-content: space-between;
+  background-color: #121212;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.20);
+
+}
+p.m_nav_text{
+  display: none;
+}
+
+.nav_overlay{
+  box-sizing: border-box;
+  padding: 5px 25px;
+  display: flex;
+  background: rgba(255, 255, 255,0.02);
+}
+.left{
+  flex-basis: 1 1 20%;
+}
+.middle{
+  display: flex;
+  justify-content: center;
+  flex: 1 1 60%;
+  align-items: center;
+}
+.right{
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 1 1 20%;
+}
+
+/* navbar */
+.header{
+  box-sizing: border-box;
+  padding: 0 25px 0 25px;
+  top: 25px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100vw;
+}
+
+/* buttons */
+
+.ul{
+  display: flex;
+}
+.li{
+  padding: 0 10px 0 10px;
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+/*---------------------------------------------------*/
+
+#logout{
+  padding: 0 10px 0 10px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+#logout:hover{
+  color: #FFB300;
+}
+
+
+.center{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+h3{ /* Logo */
+  font-size: 34px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  letter-spacing: 5px;
+  line-height: 35px;
+  background: -webkit-linear-gradient(#fccf3a, #FFB300, #de791e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  .hamburger {
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 15px;
+  }
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    background: #FFB300;
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(100px at 0% -100%);
+    -webkit-clip-path: circle(100px at 0% -100%);
+    transition: all 350ms ease-out;
+    pointer-events: none;
+  }
+
+.subj{
+    text-align: left;
+}
+
+p{
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+h1{
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 30px;
+}
+
+label{
+    font-size: 21px;
+}
+
+.deletesem{
+    padding: 0;
+    margin: 0;
+    margin-left: -50px;
+    height: 15px;
+    width: auto;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.deletesem:hover,.deletesem i:hover{
+    background-image:none;
+    box-shadow: none;
+    background-color: transparent;
+    color:#FFB300;
+}
+
+
+
+#tdcourse{width: 60%;}
+#tdgrade{width: 20%;}
+#tdremove{width: 20%;}
+
+/*  SEARCH DROPDOWN course box*/
+.select2-container{
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  font-size: 16px;
+
+}
+
+/*dropdown menu with scroll*/
+.select2-dropdown.select2-dropdown--below{
+    z-index: 1000000000000;
+    color: black;
+    text-align: left; 
+   /* border: solid 2px blue;*/
+}
+/*3rows above*/
+.select2-container--default .select2-results>.select2-results__options{
+    max-height:200px;
+    overflow: scroll;
+    text-align: center;
+    color:black
+        
+}
+
+/*hover the options*/
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+background-color:dodgerblue;
+/*color:black; */
+font-size: 16px; font-family: 'Montserrat', sans-serif;
+}
+
+/*height of select dropdown*/
+.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--multiple,.select2-container--classic.select2-selection--single{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 35px;
+    min-height: 35px;
+   margin-top: -2%;
+    padding: 4px;
+    color:black;
+       border:solid 3px green;
+}
+
+input, select, option  {
+  width: 100%;
+  align-self: center;
+  color: black;
+  margin: 2px 0px 10px 0px;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 5px;
+}
+
+ .dropdown-toggle::after{
+  display:none;
+}
+
+.dropdown .dropdown-menu{
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  max-height: 0;
+  display: block;
+  opacity: 0;
+}
+
+
+
+.dropdown:hover .dropdown-menu{
+  max-height: 100px;
+  margin-left: 50px;
+  margin-top: -20px;
+  border:solid gray 2px;
+  opacity: 1;
+  cursor: pointer;
+  background-color: gray;
+  width:fit-content;
+  border:none;
+}
+
+.menu-button{
+    background:transparent;
+    border:none;
+    padding:0;
+    margin: 0;
+    font-size: 15px;
+    outline:none;
+    cursor:pointer;
+    color: white;
+    width: 100%;
+}
+
+.dropdown-menu{
+  z-index: 10000;
+  position: absolute;
+  margin-left: 50px;
+}
+
+.menu{
+   border:none;
+    color:white;
+    padding: 0;
+    margin: 0;
+    font-size:20px;
+    }
+
+.menu:hover{
+    color:orange;
+}
+
+.menubutton{
+    background-color: transparent;
+     border:none;
+    width:auto;
+    height:auto;}
+
+/* Not menu lol*/
+.gwatext{
+    font-weight:600;
+    color: orange;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 120px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 10px 0 10px;
+  outline: none;
+  margin: 10px;
+}
+button:hover{
+  background-color: #FFB300;
+  border-color: transparent;
+  color: white;
+}
+
+.border{
+  border-bottom: 7px solid #FFB300;
+  height: 20px;
+  width: 650px;
+  align-self: center;
+}
+
+
+button.modal_button{
+  float:right;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+button.modal_button:hover{
+  background-color: #FFB300;
+  border: none;
+}
+
+
+.navbar{
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  flex-direction: row;
+}
+.navbar > li {
+  text-align: center;
+  flex: 1;
+  align-content: center;
+}
+
+.table_container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.table_overlay{
+  background: #121212;
+  margin: 15px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 0 1 30%;
+  align-items: flex-start;
+}
+.table_items{
+  flex: 0 1 30%;
+  border-radius: 15px;
+  box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20);
+  box-sizing: border-box;
+  padding: 10px;
+  background: rgba(255, 255, 255,0.05);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.course-info {
+  padding: 0px;
+}
+.sem-selection{
+    width:100%;
+}
+#course-info .fa-trash-o{
+  margin: 2px 0px 10px 0px;
+  position: relative;
+  text-align: center;
+  font-size:20px;
+  width: 30px;
+  height: 30px;
+  padding-top: 50%;
+}
+#course-info  .fa-trash-o:hover{
+  color: #FFB300;
+  cursor: pointer;
+}
+.add{
+      font-size: 16px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: left;
+    color:white;
+    text-decoration: none;
+}
+.add:hover{
+    color: #FFB300;
+}
+
+.acad_year_text{
+  margin: 10px 25px;
+  color:orange;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Roboto Mono', sans-serif;
+  padding-bottom: 5px;
+    text-align: center;
+}
+.acad_year_text2{
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 34px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 5px;
+}
+.acad_year_text3{
+  text-align: center;
+  margin: 10px 1% 10px 1%;
+  color: orange;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 5px;
+}
+.semester_text{
+  width: 100vw;
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+th{
+  width: 20vw;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+}
+
+td{
+  box-sizing: border-box;
+  padding: 5px;
+}
+#delete_sem{
+  float: right;
+}
+
+.subjects{
+  text-align: left !important;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+
+}
+#add_btn{
+  border: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 75px;
+  width: 75px;
+  margin: 25px;
+  z-index: 2;
+  border-radius: 50%;
+  background: rgb(255, 179, 0);
+}
+
+#add_btn .feather{
+  margin: 0;
+}
+#add_btn:hover{
+  background: rgb(255, 179, 0, 0.8);
+}
+/* ICONS */
+.feather {
+  margin: 0 50px;
+  width: 24px;
+  height: 24px;
+  stroke: #E0E0E0;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+#log_out{
+  margin: 0;
+}
+.feather:hover{
+  stroke: white;
+  cursor: pointer;
+}
+@media all and (max-width: 1440px) {
+  .navbar, .table_container, .table_items{
+    flex-wrap: wrap;
+  }
+  .table_items{
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+   }
+   th, .subjects{
+       font-size: 20px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+   }
+   .acad_year_text{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+   }
+   .semester_text{
+     width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+   }
+}
+@media all and (max-width: 850px) {
+  .nav_overlay{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left, .right{
+    flex: 0 0 auto;
+    padding: 10px;
+    flex-direction: column;
+    align-self: center;
+  }
+  .middle{
+    flex: 0 0 auto;
+  }
+
+}

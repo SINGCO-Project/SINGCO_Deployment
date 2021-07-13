@@ -1,0 +1,183 @@
+ .drop{
+      background: none;
+      outline: none;
+      border: none;
+      line-height: 1;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: black;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .close-upload{
+      border:solid transparent 2px;
+      font-size: 20px;
+      background-color: #FFF; color: black;
+      cursor: pointer;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .close-upload:hover{
+      color: #deaf2c;
+    }
+
+    .modal-open{
+      overflow:hidden;
+    }
+
+    .modal{
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      z-index:1050;
+      display:none;
+      overflow:hidden;
+      outline:0;
+        
+        
+    }
+
+    .modal.fade .modal-dialog-upload, .modal-dialog-upload{
+      transition:-webkit-transform .3s ease-out;
+      transition:transform .3s ease-out;
+      transition:transform .3s ease-out,-webkit-transform .3s ease-out;
+      -webkit-transform:translate(0,-25%);
+      transform:translate(0,-25%);
+    }
+
+    .modal.show .modal-dialog-upload, modal-dialog-upload{
+      -webkit-transform:translate(0,0);
+      transform:translate(0,0);
+    }
+
+    .modal-open .modal{
+      overflow-x:hidden;
+      overflow-y:auto;
+    }
+
+    .modal-dialog,modal-dialog-upload{
+      position:relative;
+      width:auto;
+      margin:10px;
+    }
+
+    .modal-content-upload{
+      position:relative;
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-direction:column;
+      flex-direction:column;
+      background-color:#fff;
+      background-clip:padding-box;
+      border:1px solid rgba(0,0,0,.2);
+      border-radius:.3rem;
+      outline:0;
+      width: 100%;
+      height: 90%;
+      margin: 30px auto;
+        
+    }
+
+    .modal-backdrop{
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      z-index:1040;
+      background-color:#000;
+    }
+
+    .modal-backdrop.fade{
+      opacity:0;
+    }
+
+    .modal-backdrop.show{
+      opacity:.5;
+    }
+
+    .modal-header-upload{
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-align:center;
+      align-items:center;
+      -ms-flex-pack:justify;
+      justify-content:space-between;
+      padding-left:10px;
+      border-bottom:1px solid #e9ecef;
+    }
+
+    .modal-title-upload{
+        margin-bottom:0;
+        line-height:1.5;
+        color:black;    
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 2px;
+    }
+      
+    .modal-body-upload{
+     height: auto;
+     position:relative;
+     -ms-flex:1 1 auto;
+     flex:1 1 auto;
+     padding:25px;
+     padding-top: 0;
+    }
+
+    .modal-footer-upload{
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-align:center;
+      align-items:center;
+      -ms-flex-pack:end;
+      justify-content:flex-end;
+      padding:10px;
+      border-top:1px solid #e9ecef;
+      height: auto;
+      margin-top: 5px;
+    }
+    
+    .modal-footer-upload>:not(:first-child){
+      margin-left:.25rem;
+    }
+
+    .modal-footer-upload>:not(:last-child){
+      margin-right:.25rem;
+    }
+
+   /* .modal-scrollbar-measure{
+      position:absolute;
+      top:-9999px;
+      width:50px;
+      height:50px;
+      overflow:scroll;
+    }
+*/
+
+.modal{
+        text-align: center;
+       
+}
+
+    @media (min-width:80%){
+      .modal-dialog-upload{
+        max-width:80%;
+        margin:30px auto;
+        display: inline-block;
+        
+      }
+      .modal-sm{
+        max-width:300px;
+      }
+    }
+
+    @media (min-width:992px){
+      .modal-lg{
+        max-width:800px;
+      }
+    }
